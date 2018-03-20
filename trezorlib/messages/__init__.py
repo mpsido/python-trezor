@@ -101,6 +101,7 @@ from .PassphraseStateRequest import *
 from .PinMatrixAck import *
 from .PinMatrixRequest import *
 from .Ping import *
+from .SkycoinAddress import *
 from .PublicKey import *
 from .RecoveryDevice import *
 from .ResetDevice import *

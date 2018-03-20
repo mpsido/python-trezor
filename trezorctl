@@ -136,6 +136,13 @@ def version():
 # Basic device functions
 #
 
+@cli.command(help='Generate a Skycoin or a Bitcoin address.')
+@click.argument('seed')
+@click.pass_obj
+def skycoin_address(connect, seed):
+    return connect().skycoin_address(seed)
+
+
 
 @cli.command(help='Send ping message.')
 @click.argument('message')

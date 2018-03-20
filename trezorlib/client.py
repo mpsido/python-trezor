@@ -631,6 +631,11 @@ class ProtocolMixin(object):
 
     @field('message')
     @expect(proto.Success)
+    def skycoin_address(self, message):
+        return self.call(proto.SkycoinAddress(seed=message))
+
+    @field('message')
+    @expect(proto.Success)
     def ping(self, msg, button_protection=False, pin_protection=False, passphrase_protection=False):
         msg = proto.Ping(message=msg,
                          button_protection=button_protection,

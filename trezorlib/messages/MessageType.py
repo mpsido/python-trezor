@@ -84,3 +84,4 @@ DebugLinkMemoryRead = 110
 DebugLinkMemory = 111
 DebugLinkMemoryWrite = 112
 DebugLinkFlashErase = 113
+SkycoinAddress = 114
