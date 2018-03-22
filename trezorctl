@@ -138,9 +138,10 @@ def version():
 
 @cli.command(help='Generate a Skycoin or a Bitcoin address.')
 @click.argument('seed')
+@click.option('-a', '--address-type', help='type of address 1 = Skycoin, 2 = Bitcoin')
 @click.pass_obj
-def skycoin_address(connect, seed):
-    return connect().skycoin_address(seed)
+def skycoin_address(connect, seed, address_type):
+    return connect().skycoin_address(seed, addr_type=address_type)
 
 
 

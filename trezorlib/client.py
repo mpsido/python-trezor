@@ -631,8 +631,8 @@ class ProtocolMixin(object):
 
     @field('message')
     @expect(proto.Success)
-    def skycoin_address(self, message):
-        return self.call(proto.SkycoinAddress(seed=message))
+    def skycoin_address(self, message, addr_type=1):
+        return self.call(proto.SkycoinAddress(seed=message, address_type=addr_type))
 
     @field('message')
     @expect(proto.Success)

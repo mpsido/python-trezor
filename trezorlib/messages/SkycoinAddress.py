@@ -6,5 +6,6 @@ from .. import protobuf as p
 class SkycoinAddress(p.MessageType):
     FIELDS = {
         1: ('seed', p.UnicodeType, 0),
+        2: ('address_type', p.BoolType, 0)
     }
     MESSAGE_WIRE_TYPE = 114
